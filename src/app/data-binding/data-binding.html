@@ -1,1 +1,32 @@
-<p>data-binding works!</p>
+<div align="center">
+  <h4>String interpolation</h4>
+  <p>My name is {{name}} and I am learning {{topic}}</p>
+  <h4>Property binding</h4>
+  <input type="text" name="" id="" [value]="topic" [placeholder]="topic" />
+  <div style="height: 160px; width: 240px; border: 1px solid black">
+    <img
+      [src]="image"
+      [alt]="name"
+      style="height: 100%; width: 100%; object-fit: cover"
+    />
+  </div>
+  <h4>Event binding</h4>
+  <button (click)="onSave()">Save</button>
+  <label for="country">Choose a country:</label>
+  <select id="country" (change)="onCountrySelect($event)">
+    <option value="">Select one</option>
+
+    @for (country of countries; track country; ) {
+    <option [value]="country">{{ country }}</option>
+    }
+  </select>
+
+  @if (selectedCountry) {
+  <p>You selected: {{ selectedCountry }}</p>
+  }
+  <h4>Two way data binding</h4>
+  <div>
+    <input type="text" [(ngModel)]="random" />
+    {{random}}
+  </div>
+</div>
