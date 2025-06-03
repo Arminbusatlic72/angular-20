@@ -18,10 +18,12 @@
   <div class="col-4">
     <table class="table table-bordered">
       <thead>
-        <th>Name</th>
-        <th>Number</th>
-        <th>Email</th>
-        <th>Department</th>
+        <tr>
+          <th>Name</th>
+          <th>Number</th>
+          <th>Email</th>
+          <th>Department</th>
+        </tr>
       </thead>
       <!-- <tr *ngFor="let emp of employees">
         <td>{{ emp.empName }}</td>
@@ -29,21 +31,37 @@
         <td>{{ emp.empEmail }}</td>
         <td>{{ emp.empDept }}</td>
       </tr> -->
-      @for(emp of employees; track emp) {
-      <tr>
-        <td>{{ emp.empName }}</td>
-        <td>{{ emp.empNumber }}</td>
-        <td>{{ emp.empEmail }}</td>
-        <td>{{ emp.empDept }}</td>
-      </tr>
-      }
+      <tbody>
+        @for(emp of employees; track emp) {
+        <tr>
+          <td>{{ emp.empName }}</td>
+          <td>{{ emp.empNumber }}</td>
+          <td>{{ emp.empEmail }}</td>
+          <td>{{ emp.empDept }}</td>
+        </tr>
+        }
+      </tbody>
     </table>
   </div>
   <div class="col-4">
     <ul>
       <!-- <li *ngFor="let company of companyList">{{company}}</li> -->
-      @for(company of companyList; track company) {
+      @for(company of companyList; track company; let f=$first, l=$last,
+      e=$even, o=$odd, c=$count, i=$index) { @if(f == true) {
+      <li style="color: red">{{company}}</li>
+      } @else if (l == true) {
+      <li style="color: blue">{{company}}</li>
+      } @else {
       <li>{{company}}</li>
+      } } @empty {
+      <li>No company found</li>
+      }
+    </ul>
+  </div>
+  <div class="col-4">
+    <ul>
+      @for (company of companyList; track company; let f = $first, l = $last) {
+      <li [style.color]="f ? 'green' : l ? 'yellow' : ''">{{ company }}</li>
       }
     </ul>
   </div>
