@@ -4,6 +4,7 @@ import { User } from './user/user';
 import { DataBinding } from './data-binding/data-binding';
 import { Directives } from './directives/directives';
 import { StructuralDirectiveNgifVsIf } from './structural-directive-ngif-vs-if/structural-directive-ngif-vs-if';
+import { StructuralDirectiveNgforVsFo } from './structural-directive-ngfor-vs-fo/structural-directive-ngfor-vs-fo';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import { StructuralDirectiveNgifVsIf } from './structural-directive-ngif-vs-if/s
     DataBinding,
     Directives,
     StructuralDirectiveNgifVsIf,
+    StructuralDirectiveNgforVsFo,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
