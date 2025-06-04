@@ -1,0 +1,53 @@
+<div class="row text-center">
+  <div class="col-12 m-3">
+    <h4>Examples of attribute directives</h4>
+  </div>
+</div>
+<div class="row text-center pt-3">
+  <div class="col-4">
+    <h3 [ngClass]="textColor">This is the first example of ngClass</h3>
+    <br />
+    <button (click)="changeColor('text-success')" class="btn btn-success m-2">
+      change to green
+    </button>
+    <button (click)="changeColor('text-danger')" class="btn btn-danger m-2">
+      change to red
+    </button>
+  </div>
+  <div class="col-4">
+    <h4 [style.color]="isTextGreen ? 'green' :'red' ">Hello</h4>
+    <br />
+    <input type="checkbox" [(ngModel)]="isTextGreen" /> change color
+  </div>
+  <div class="col-4">
+    <h4 [ngClass]="userClass">Hello</h4>
+    <br />
+    <input type="text" [(ngModel)]="userClass" placeholder="ex: text-success" />
+  </div>
+</div>
+<div class="row text-center pt-3">
+  <div class="col-4">
+    <h3 [ngStyle]="{'color': styleColor,'font-weight':'lighter'}">
+      This is the first example of ngStyle
+    </h3>
+    <br />
+    <button class="btn btn-warning m-2" (click)="updateColor('orange')">
+      Change to Orange
+    </button>
+    <button class="btn btn-primary m-2" (click)="updateColor('blue')">
+      Change to blue
+    </button>
+  </div>
+
+  <div class="col-4">
+    <h3 [ngStyle]="{'color': isTextOrange ? 'orange' : 'blue'}">
+      This is the second example of ngStyle
+    </h3>
+    <br />
+    <input type="checkbox" [(ngModel)]="isTextOrange" /> Change Color
+  </div>
+
+  <div class="col-4">
+    <h3 [ngStyle]="customClass">This is the third example of ngStyle</h3>
+  </div>
+</div>
