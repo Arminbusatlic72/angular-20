@@ -7,6 +7,7 @@ import { StructuralDirectiveNgifVsIf } from './structural-directive-ngif-vs-if/s
 import { StructuralDirectiveNgforVsFo } from './structural-directive-ngfor-vs-fo/structural-directive-ngfor-vs-fo';
 import { StructuralDirectiveNgswitchVsSwitch } from './structural-directive-ngswitch-vs-switch/structural-directive-ngswitch-vs-switch';
 import { AttributeDirectives } from './attribute-directives/attribute-directives';
+import { Signals } from './signals/signals';
 
 @Component({
   selector: 'app-root',
@@ -14,11 +15,12 @@ import { AttributeDirectives } from './attribute-directives/attribute-directives
     RouterOutlet,
     User,
     DataBinding,
-    Directives,
-    StructuralDirectiveNgifVsIf,
-    StructuralDirectiveNgforVsFo,
-    StructuralDirectiveNgswitchVsSwitch,
-    AttributeDirectives,
+    // Directives,
+    // StructuralDirectiveNgifVsIf,
+    // StructuralDirectiveNgforVsFo,
+    // StructuralDirectiveNgswitchVsSwitch,
+    // AttributeDirectives,
+    Signals,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
