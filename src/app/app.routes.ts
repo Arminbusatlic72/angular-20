@@ -4,6 +4,7 @@ import { DataBinding } from './data-binding/data-binding';
 import { StructuralDirectiveNgforVsFo } from './structural-directive-ngfor-vs-fo/structural-directive-ngfor-vs-fo';
 import { Signals } from './signals/signals';
 import { PageNotFound } from './page-not-found/page-not-found';
+import { BuiltInPipes } from './built-in-pipes/built-in-pipes';
 
 export const routes: Routes = [
   // { path: '', component: User }, heandling empty or non existing path
@@ -12,5 +13,6 @@ export const routes: Routes = [
   { path: 'data-binding', component: DataBinding },
   { path: 'structural-directives', component: StructuralDirectiveNgforVsFo },
   { path: 'signals', component: Signals },
+  { path: 'built-in-pipes', component: BuiltInPipes },
   { path: '**', component: PageNotFound }, // Redirect to pageNotFound component for any non-existing path
 ];
